@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
         <img src="img/logo-logo.png" width="72" height="72" />
-        <h4 class="white">Sistem Informasi Geografis Fasilitas Kesehatan</h4>
-        <h3 class="white">Indonesia</h3>
+        <h3 class="white">Sistem Informasi Geografis Fasilitas Kesehatan</h3>
+        <h4 class="white">Kecamatan Lowokwaru Kota Malang</h4>
         <ul class="list-inline">
           <li><a href="" class="link-footer">Beranda</a></li>
           <li><a href="" class="link-footer">Petunjuk Penggunaan</a></li>
@@ -26,8 +26,6 @@
       </div>
       <div class="modal-body">
         <h4>SISTEM INFORMASI GEOGRAFIS PEMETAAN FASILITAS KESEHATAN KECAMATAN LOWOKWARU KOTA MALANG</h4>
-        <!-- <p>Program ini dibuat oleh Sofyan (Juniordev) untuk Tugas Praktikum GIS 2014.</p>
-        <p>Diharapkan program ini memberikan manfaat</p> -->
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <?php
-$title = "Sistem Informasi Geografis Jasa Web";
+$title = "Sistem Informasi Geografis Fasilitas Kesehatan Kota Malang";
 include_once "header.php"; ?>
 <div class="row">
   <div class="col-md-12">

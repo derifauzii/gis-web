@@ -1,6 +1,7 @@
 <?php
 include "koneksi.php";
-$Q = mysqli_query($koneksi, "SELECT * FROM jasaweb where id_perusahaan=" . $id);
+$Q = mysqli_query($koneksi, "SELECT * FROM faskes where id_faskes=" . $id);
+
 // or die(mysql_error());
 if ($Q) {
         $posts = array();
@@ -11,3 +12,4 @@ if ($Q) {
         }
         $data = json_encode(array('results' => $posts));
 }
+unset($id);

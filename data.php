@@ -1,5 +1,5 @@
 <?php
-$title = "Daftar Penyedia Jasa Web";
+$title = "Daftar Fasilitas Kesehatan";
 include_once "header.php";
 include_once "koneksi.php"; ?>
 
@@ -13,17 +13,18 @@ include_once "koneksi.php"; ?>
         <table class="table table-bordered table-striped table-admin">
           <thead>
             <tr>
-              <th width="10%">No.</th>
-              <th width="30%">Nama Perusahaan</th>
-              <th width="10%">Kategori</th>
-              <th width="13%">Kota</th>
-              <th width="20%">Website</th>
-              <th width="27%">Aksi</th>
+              <th width="5%">No.</th>
+              <th width="25%">Nama Fasilitas Kesehatan</th>
+              <th width="25%">Alamat</th>
+              <th width="15%">No. Telepon</th>
+              <th width="10%">Latitude</th>
+              <th width="10%">Longitude</th>
+              <th width="20%">Aksi</th>
             </tr>
           </thead>
-          <!-- <tbody>
+          <tbody>
             <?php
-            $data = file_get_contents('http://localhost/GIS/Sistem-Informasi-Geografis-dengan-PHP-dan-Google-Maps-API/ambildata.php');
+            $data = file_get_contents('http://localhost/gis-web/ambildata.php');
             $no = 1;
             if (json_decode($data, true)) {
               $obj = json_decode($data);
@@ -31,13 +32,14 @@ include_once "koneksi.php"; ?>
             ?>
                 <tr>
                   <td><?php echo $no; ?></td>
-                  <td><?php echo $item->nama_perusahaan; ?></td>
-                  <td><?php echo $item->kategori; ?></td>
-                  <td><?php echo $item->kota; ?></td>
-                  <td><?php echo $item->website; ?></td>
+                  <td><?php echo $item->nama_faskes; ?></td>
+                  <td><?php echo $item->alamat; ?></td>
+                  <td><?php echo $item->telepon; ?></td>
+                  <td><?php echo $item->latitude; ?></td>
+                  <td><?php echo $item->longitude; ?></td>
                   <td class="ctr">
                     <div class="btn-group">
-                      <a target="_blank" href="detail.php?id=<?php echo $item->id_perusahaan; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
+                      <a target="_blank" href="detail.php?id=<?php echo $item->id; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
                         <i class="fa fa-map-marker"> </i> Detail dan Lokasi</a>&nbsp;
                     </div>
                   </td>
@@ -48,7 +50,7 @@ include_once "koneksi.php"; ?>
               echo "data tidak ada.";
             } ?>
 
-          </tbody> -->
+          </tbody>
         </table>
       </div>
     </div>

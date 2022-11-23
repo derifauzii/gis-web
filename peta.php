@@ -1,5 +1,5 @@
 <?php
-$title = "Peta Penyedia Jasa Web";
+$title = "Peta Fasilitas Kesehatan Kecamatan Lowokwaru";
 include_once "header.php";
 ?>
 
@@ -13,7 +13,7 @@ include_once "header.php";
       <div class="panel-body">
         <div id="map" style="width:100%;height:380px;"></div>
 
-        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAbXF62gVyhJOVkRiTHcVp_BkjPYDQfH5w"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAbXF62gVyhJOVkRiTHcVp_BkjPYDQfH5w"></script>
 
         <script type="text/javascript">
           function initialize() {
@@ -34,12 +34,12 @@ include_once "header.php";
 
           var officeLocations = [
             <?php
-            $data = file_get_contents('http://localhost/jasaweb/ambildata.php');
+            $data = file_get_contents('http://localhost/gis-web/ambildata.php');
             $no = 1;
             if (json_decode($data, true)) {
               $obj = json_decode($data);
               foreach ($obj->results as $item) {
-            ?>[<?php echo $item->id_perusahaan ?>, '<?php echo $item->nama_perusahaan ?>', '<?php echo $item->alamat ?>', <?php echo $item->longitude ?>, <?php echo $item->latitude ?>],
+            ?>[<?php echo $item->id ?>, '<?php echo $item->nama_faskes ?>', '<?php echo $item->alamat ?>', '<?php echo $item->telepon ?>', <?php echo $item->latitude ?>, <?php echo $item->longitude ?>],
             <?php
               }
             }
@@ -89,7 +89,7 @@ include_once "header.php";
           }
 
           initialize();
-        </script>
+        </script> -->
       </div>
     </div>
   </div>
