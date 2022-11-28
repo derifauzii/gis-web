@@ -1,6 +1,6 @@
 <?php
 include "koneksi.php";
-$Q = mysqli_query($koneksi, "SELECT * FROM faskes where id_faskes=" . $id);
+$Q = mysqli_query($koneksi, "SELECT * FROM faskes where id_faskes =" . $id);
 
 // or die(mysql_error());
 if ($Q) {
@@ -11,5 +11,5 @@ if ($Q) {
                 }
         }
         $data = json_encode(array('results' => $posts));
+        echo ($data);
 }
-unset($id);
