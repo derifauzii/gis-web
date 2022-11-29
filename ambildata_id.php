@@ -13,3 +13,4 @@ if ($Q) {
         $data = json_encode(array('results' => $posts));
         echo ($data);
 }
+unset($id);

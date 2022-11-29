@@ -1,13 +1,13 @@
 <?php
 $id = $_GET['id'];
-include_once "ambildata_id.php";
-$obj = json_decode($data);
+include "ambildata_id.php";
 $titles = "";
 $id = "";
 $alamat = "";
 $telepon = "";
 $lat = "";
 $long = "";
+$obj = json_decode($data);
 foreach ($obj->results as $item) {
   $titles .= $item->nama_faskes;
   $id .= $item->id;
