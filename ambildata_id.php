@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
-$Q = mysqli_query($koneksi, "SELECT * FROM faskes where id_faskes =" . $id);
 
+$Q = mysqli_query($koneksi, "SELECT * FROM faskes where id_faskes = " . "'$id'");
 // or die(mysql_error());
 if ($Q) {
         $posts = array();

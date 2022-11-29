@@ -52,7 +52,6 @@
           <li><a href="index.php"><i class="fa fa-home"></i> HALAMAN DEPAN</a></li>
           <li><a href="data.php"><i class="fa fa-list-ul"></i> DATA JFASILITAS KESEHATAN</a></li>
           <li><a href="peta.php"><i class="fa fa-map-marker"></i> PETA PERSEBARAN FASILITAS KESEHATAN</a></li>
-          <li><a href="about.php" data-toggle="modal" data-target="#about"><i class="fa fa-user"></i> ABOUT</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>

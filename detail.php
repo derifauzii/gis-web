@@ -1,28 +1,29 @@
 <?php
 $id = $_GET['id'];
-include "ambildata_id.php";
+include_once "ambildata_id.php";
 $titles = "";
-$id = "";
+$id_faskes = "";
 $alamat = "";
 $telepon = "";
 $lat = "";
 $long = "";
+
 $obj = json_decode($data);
 foreach ($obj->results as $item) {
   $titles .= $item->nama_faskes;
-  $id .= $item->id;
+  $id .= $item->id_faskes;
   $alamat .= $item->alamat;
-  $hp .= $item->no_hp;
+  $telepon .= $item->telepon;
   $lat .= $item->latitude;
   $long .= $item->longitude;
 }
 
-$title = "Detail dan Lokasi : " . $titles;
+$title = "Detail dan Lokasi " . $titles;
 include_once "header.php"; ?>
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAbXF62gVyhJOVkRiTHcVp_BkjPYDQfH5w"></script> -->
 
-<script>
+<!-- <script>
   function initialize() {
     var myLatlng = new google.maps.LatLng(<?php echo $lat ?>, <?php echo $long ?>);
     var mapOptions = {
@@ -57,7 +58,7 @@ include_once "header.php"; ?>
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+</script> -->
 <div class="row">
   <div class="col-md-5">
     <div class="panel panel-info panel-dashboard">
@@ -81,21 +82,9 @@ include_once "header.php"; ?>
             <th>Detail</th>
           </tr>
           <tr>
-            <td>Nama Perusahaan</td>
+            <td>Nama Fasilitas Kesehatan</td>
             <td>
               <h4><?php echo $titles ?></h4>
-            </td>
-          </tr>
-          <tr>
-            <td>Kota</td>
-            <td>
-              <h4><?php echo $kota ?></h4>
-            </td>
-          </tr>
-          <tr>
-            <td>Provinsi</td>
-            <td>
-              <h4><?php echo $prov ?></h4>
             </td>
           </tr>
           <tr>
@@ -105,15 +94,21 @@ include_once "header.php"; ?>
             </td>
           </tr>
           <tr>
-            <td>No HP</td>
+            <td>Telepon</td>
             <td>
-              <h4><?php echo $hp ?></h4>
+              <h4><?php echo $telepon ?></h4>
             </td>
           </tr>
           <tr>
-            <td>Website</td>
+            <td>Latitude</td>
             <td>
-              <h4><a href="http://<?php echo $web ?>"><?php echo $web ?></a></h4>
+              <h4><?php echo $lat ?></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>Longitude</td>
+            <td>
+              <h4><?php echo $long ?></h4>
             </td>
           </tr>
         </table>
