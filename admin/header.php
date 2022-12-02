@@ -49,9 +49,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="index.php"><i class="fa fa-home"></i> HALAMAN DEPAN</a></li>
-          <li><a href="data.php"><i class="fa fa-list-ul"></i> DATA FASILITAS KESEHATAN</a></li>
-          <li><a href="peta.php"><i class="fa fa-map-marker"></i> PETA PERSEBARAN FASILITAS KESEHATAN</a></li>
+          <li><a href="master-data.php"><i class="fa fa-list-ul"></i> DATA FASILITAS KESEHATAN</a></li>
+          <li><a href="master-peta.php"><i class="fa fa-map-marker"></i> PETA PERSEBARAN FASILITAS KESEHATAN</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>

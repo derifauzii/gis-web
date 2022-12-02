@@ -34,7 +34,7 @@ include_once "header.php";
             ?>
           ];
 
-          var map = L.map('map').setView([-7.9390115, 112.6058835], 14);
+          var map = L.map('map').setView([-7.949539511407199, 112.61580582060338], 14);
           mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
           L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; ' + mapLink + ' Contributors',
