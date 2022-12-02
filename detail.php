@@ -29,13 +29,13 @@ include_once "header.php"; ?>
       <div class="panel-body">
         <div id="map" style="width:100%;height:380px;">
           <script>
-            var map = L.map('map').setView([-7.9390115, 112.6058835], 14);
+            var map = L.map('map').setView([<?php echo $lat ?>, <?php echo $long  ?>], 14);
             mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
             L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               attribution: '&copy; ' + mapLink + ' Contributors',
               maxZoom: 18,
             }).addTo(map);
-            var marker = L.marker([-7.943171209402488, 112.61203987333857]).addTo(map);
+            var marker = L.marker([<?php echo $lat ?>, <?php echo $long ?>]).addTo(map);
           </script>
         </div>
       </div>

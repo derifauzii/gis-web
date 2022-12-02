@@ -42,7 +42,7 @@ include_once "header.php";
           }).addTo(map);
           for (var i = 0; i < locations.length; i++) {
             marker = new L.marker([locations[i][4], locations[i][5]])
-              .bindPopup(locations[i][1])
+              .bindPopup('<a href="detail.php?id_faskes=' + locations[i][0] + '">' + locations[i][1] + '</a>')
               .addTo(map);
           }
         </script>
