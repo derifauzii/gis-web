@@ -11,8 +11,8 @@ include_once "header.php";
                 <h2 class="panel-title"><strong> - EDIT DATA - </strong></h2>
                 <?php
                 include_once "koneksi.php";
-                $id = @$_GET['id_faskes'];
-                $query_mysql = mysqli_query($koneksi, "SELECT * FROM faskes WHERE id_faskes= '$id' ");
+                $id_faskes = @$_GET['id_faskes'];
+                $query_mysql = mysqli_query($koneksi, "SELECT * FROM faskes WHERE id_faskes= '$id_faskes' ");
                 //$nomor = 1;
                 while ($data = mysqli_fetch_array($query_mysql)) {
                 ?>
@@ -22,7 +22,7 @@ include_once "header.php";
                     <!-- <table class="table table-bordered table-striped table-admin"> -->
                     <div class="row-md-3">
                         <label for="formGroupExampleInput" class="form-label col-md-12">Nama Fasilitas Kesehatan</label>
-                        <input type="hidden" name="id" value="<?php echo $data['id_faskes'] ?>">
+                        <input type="hidden" name="id_faskes" value="<?php echo $data['id_faskes'] ?>">
                         <input class="form-control" type="text" placeholder="NAME" name="nama_faskes" value="<?php echo $data['nama_faskes'] ?>">
                     </div>
                     <div class="row-md-3">
