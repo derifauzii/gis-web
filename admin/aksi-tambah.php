@@ -6,6 +6,7 @@ $telepon = $_POST['telepon'];
 $latitude = $_POST['latitude'];
 $longtitude = $_POST['longtitude'];
 
-mysqli_query($koneksi, "INSERT INTO faskes VALUES('','$nama_faskes','$alamat','$telepon','$latitude','$longtitude')");
+$query = "INSERT INTO faskes VALUES ('','$nama_faskes','$alamat','$telepon','$latitude','$longtitude')";
+mysqli_query($koneksi, $query);
 
-header("location: master-data.php?pesan=input");
+header("location: ../admin/master-data.php?pesan=input");
