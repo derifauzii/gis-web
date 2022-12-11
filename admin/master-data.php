@@ -48,7 +48,7 @@ include_once "koneksi.php"; ?>
                                     <td class="ctr">
                                         <div class="btn-group">
                                             <a href="edit-data.php?id_faskes=<?php echo $item->id_faskes; ?>"><button type="button" class="btn btn-warning">Edit</button></a>
-                                            <a href="delete.php"><button type="button" class="btn btn-danger">Delete</button></a>
+                                            <a href="aksi-delete.php?id_faskes=<?php echo $item->id_faskes; ?>"><button type="button" class="btn btn-danger">Delete</button></a>
                                         </div>
                                     </td>
                                 </tr>

@@ -11,7 +11,7 @@ include_once "header.php";
                 <h2 class="panel-title"><strong> - EDIT DATA - </strong></h2>
                 <?php
                 include_once "koneksi.php";
-                $id_faskes = @$_GET['id_faskes'];
+                $id_faskes = $_GET['id_faskes'];
                 $query_mysql = mysqli_query($koneksi, "SELECT * FROM faskes WHERE id_faskes= '$id_faskes' ");
                 //$nomor = 1;
                 while ($data = mysqli_fetch_array($query_mysql)) {
@@ -39,7 +39,7 @@ include_once "header.php";
                     </div>
                     <div class="row-md-3">
                         <label for="formGroupExampleInput" class="form-label col-md-12">Lokasi Latitude Fasilitas Kesehatan</label>
-                        <input class="form-control" type="text" placeholder="LONGTITUDE" name="longtitude" value="<?php echo $data['longitude'] ?>">
+                        <input class="form-control" type="text" placeholder="LONGITUDE" name="longitude" value="<?php echo $data['longitude'] ?>">
                     </div>
                     <div class="row-md-10">
                         <button class="btn btn-primary" type="submit">Edit Data</button>
