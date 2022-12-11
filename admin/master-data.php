@@ -61,6 +61,9 @@ include_once "koneksi.php"; ?>
                     </tbody>
                 </table>
             </div>
+            <div class="panel-body">
+                <a href="index.php"><button type="button" class="btn btn-danger">Logout</button></a>
+            </div>
         </div>
     </div>
 </div>

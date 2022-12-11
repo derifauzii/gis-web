@@ -1,53 +1,57 @@
-<!DOCTYPE html>
+<?php
+$title = "Daftar Fasilitas Kesehatan";
+include_once "header.php";
+include_once "koneksi.php"; ?>
 
-<head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-</head>
-
-<body>
-    <div class="container py-5   h-100">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="title">Tambah Data</h2>
-                    <form action="admin/aksi-tambah.php" method="POST">
-                        <div class="mb-3">
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-info panel-dashboard">
+            <div class="panel-heading centered">
+                <h2 class="panel-title"><strong> - TAMBAH DATA - </strong></h2>
+            </div>
+            <div class="panel-body">
+                <form action="aksi-tambah.php" method="post">
+                    <table class="table table-bordered table-striped table-admin">
+                        <div class="row-md-3">
+                            <label for="formGroupExampleInput" class="form-label col-md-12">Nama Fasilitas Kesehatan</label>
                             <input class="form-control" type="text" placeholder="NAME" name="nama_faskes">
                         </div>
-                        <div class="mb-3">
+                        <div class="row-md-3">
+                            <label for="formGroupExampleInput" class="form-label col-md-12">Alamat Fasilitas Kesehatan</label>
                             <input class="form-control" type="text" placeholder="ALAMAT" name="alamat">
                         </div>
-                        <div class="mb-3">
+                        <div class="row-md-3">
+                            <label for="formGroupExampleInput" class="form-label col-md-12">Nomor Telepon Fasilitas Kesehatan</label>
                             <input class="form-control" type="text" placeholder="NO TELEPON" name="telepon">
                         </div>
-                        <div class="mb-3">
+                        <div class="row-md-3">
+                            <label for="formGroupExampleInput" class="form-label col-md-12">Lokasi Latitude Fasilitas Kesehatan</label>
                             <input class="form-control" type="text" placeholder="LATITUDE" name="latitude">
                         </div>
-                        <div class="mb-3">
+                        <div class="row-md-3">
+                            <label for="formGroupExampleInput" class="form-label col-md-12">Lokasi Latitude Fasilitas Kesehatan</label>
                             <input class="form-control" type="text" placeholder="LONGTITUDE" name="longtitude">
                         </div>
-                        <div class="mb-3">
+                        <div class="row-md-10">
                             <button class="btn btn-primary" type="submit">Tambah</button>
                         </div>
-                    </form>
-                </div>
+                    </table>
+                </form>
+
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/datepicker/moment.min.js"></script>
-    <script src="vendor/datepicker/daterangepicker.js"></script>
+<!-- Jquery JS-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS-->
+<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/datepicker/moment.min.js"></script>
+<script src="vendor/datepicker/daterangepicker.js"></script>
 
-    <!-- Main JS-->
-    <script src="js/global.js"></script>
+<!-- Main JS-->
+<script src="js/global.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
