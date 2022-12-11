@@ -9,8 +9,9 @@ include_once "koneksi.php"; ?>
             <div class="panel-heading centered">
                 <h2 class="panel-title"><strong> - EDIT DATA - </strong></h2>
                 <?php
-                $id = $_GET['id_faskes'];
-                $query_mysql = mysqli_query($koneksi, "SELECT * FROM faskes WHERE id_faskes='$id'");
+                include_once "koneksi.php";
+                $id = @$_GET['id_faskes'];
+                $query_mysql = mysqli_query($koneksi, "SELECT * FROM faskes WHERE id_faskes= '$id' ");
                 //$nomor = 1;
                 while ($data = mysqli_fetch_array($query_mysql)) {
                 ?>
@@ -21,26 +22,26 @@ include_once "koneksi.php"; ?>
                     <div class="row-md-3">
                         <label for="formGroupExampleInput" class="form-label col-md-12">Nama Fasilitas Kesehatan</label>
                         <input type="hidden" name="id" value="<?php echo $data['id_faskes'] ?>">
-                        <input class="input--style-1" type="text" placeholder="NAME" name="nama_faskes" value="<?php echo $data['nama_faskes'] ?>">
+                        <input class="form-control" type="text" placeholder="NAME" name="nama_faskes" value="<?php echo $data['nama_faskes'] ?>">
                     </div>
                     <div class="row-md-3">
                         <label for="formGroupExampleInput" class="form-label col-md-12">Alamat Fasilitas Kesehatan</label>
-                        <input class="input--style-1" type="text" placeholder="ALAMAT" name="alamat" value="<?php echo $data['alamat'] ?>">
+                        <input class="form-control" type="text" placeholder="ALAMAT" name="alamat" value="<?php echo $data['alamat'] ?>">
                     </div>
                     <div class="row-md-3">
                         <label for="formGroupExampleInput" class="form-label col-md-12">Nomor Telepon Fasilitas Kesehatan</label>
-                        <input class="input--style-1" type="text" placeholder="NO TELEPON" name="telepon" value="<?php echo $data['telepon'] ?>">
+                        <input class="form-control" type="text" placeholder="NO TELEPON" name="telepon" value="<?php echo $data['telepon'] ?>">
                     </div>
                     <div class="row-md-3">
                         <label for="formGroupExampleInput" class="form-label col-md-12">Lokasi Latitude Fasilitas Kesehatan</label>
-                        <input class="input--style-1" type="text" placeholder="LATITUDE" name="latitude" value="<?php echo $data['latitude'] ?>">
+                        <input class="form-control" type="text" placeholder="LATITUDE" name="latitude" value="<?php echo $data['latitude'] ?>">
                     </div>
                     <div class="row-md-3">
                         <label for="formGroupExampleInput" class="form-label col-md-12">Lokasi Latitude Fasilitas Kesehatan</label>
-                        <input class="input--style-1" type="text" placeholder="LONGTITUDE" name="longtitude" value="<?php echo $data['longitude'] ?>">
+                        <input class="form-control" type="text" placeholder="LONGTITUDE" name="longtitude" value="<?php echo $data['longitude'] ?>">
                     </div>
                     <div class="row-md-10">
-                        <button class="btn btn-primary" type="submit">Tambah</button>
+                        <button class="btn btn-primary" type="submit">Edit Data</button>
                     </div>
                     <!-- </table> -->
                 </form>
