@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include_once "koneksi.php";
 $Q = mysqli_query($koneksi, "SELECT * FROM faskes");
 //or die(mysql_error());
 if ($Q) {

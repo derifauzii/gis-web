@@ -1,5 +1,6 @@
 <?php
-include 'koneksi.php';
+include_once 'koneksi.php';
+//$id = $_GET['id_faskes'];
 $nama_faskes = $_POST['nama_faskes'];
 $alamat = $_POST['alamat'];
 $telepon = $_POST['telepon'];

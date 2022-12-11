@@ -1,7 +1,8 @@
 <?php
 $title = "Daftar Fasilitas Kesehatan";
 include_once "header.php";
-include_once "koneksi.php"; ?>
+//include_once "koneksi.php"; 
+?>
 
 <div class="row">
     <div class="col-md-12">

@@ -26,7 +26,7 @@ include_once "koneksi.php"; ?>
                     </thead>
                     <tbody>
                         <?php
-                        $data = file_get_contents('http://localhost/gis-web/ambildata.php');
+                        $data = file_get_contents('http://localhost/gis-web/admin/ambildata.php');
                         $no = 1;
                         if (json_decode($data, true)) {
                             $obj = json_decode($data);
@@ -45,7 +45,7 @@ include_once "koneksi.php"; ?>
                                                 <i class="fa fa-map-marker"> </i> Detail dan Lokasi</a>&nbsp;
                                         </div>
                                     </td>
-                                    <td class="aksi">
+                                    <td class="ctr">
                                         <div class="btn-group">
                                             <a href="edit-data.php?id_faskes=<?php echo $item->id_faskes; ?>"><button type="button" class="btn btn-warning">Edit</button></a>
                                             <a href="delete.php"><button type="button" class="btn btn-danger">Delete</button></a>

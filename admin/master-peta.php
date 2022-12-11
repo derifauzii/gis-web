@@ -15,7 +15,7 @@ include_once "header.php";
                 <script>
                     var locations = [
                         <?php
-                        $data = file_get_contents('http://localhost/gis-web/ambildata.php');
+                        $data = file_get_contents('http://localhost/gis-web/admin/ambildata.php');
                         $no = 1;
                         if (json_decode($data, true)) {
                             $obj = json_decode($data);

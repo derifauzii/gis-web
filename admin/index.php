@@ -1,3 +1,6 @@
+<?php
+include_once "koneksi.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +13,8 @@
 
 </head>
 
+
+
 <body>
     <section class="vh-100" style="background-color: #508bfc;">
         <div class="container py-5 h-100">
@@ -19,25 +24,25 @@
                         <div class="card-body p-5 text-center">
                             <form action="aksi-login.php" method="post">
                                 <h3 class="mb-5">LOGIN ADMIN</h3>
+                                <form action="aksi-login.php" method="POST">
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="typeEmailX-2" class="form-control form-control-lg" name="username" />
+                                        <label class="form-label" for="typeEmailX-2">Username</label>
+                                    </div>
 
-                                <div class="form-outline mb-4">
-                                    <input type="text" id="typeEmailX-2" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typeEmailX-2">Username</label>
-                                </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="typePasswordX-2" class="form-control form-control-lg" name="password" />
+                                        <label class="form-label" for="typePasswordX-2">Password</label>
+                                    </div>
 
-                                <div class="form-outline mb-4">
-                                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-                                    <label class="form-label" for="typePasswordX-2">Password</label>
-                                </div>
+                                    <!-- Checkbox -->
+                                    <div class="form-check d-flex justify-content-start mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                                        <label class="form-check-label" for="form1Example3"> Remember password </label>
+                                    </div>
 
-                                <!-- Checkbox -->
-                                <div class="form-check d-flex justify-content-start mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                                    <label class="form-check-label" for="form1Example3"> Remember password </label>
-                                </div>
-
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-                            </form>
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                                </form>
                         </div>
                     </div>
                 </div>
